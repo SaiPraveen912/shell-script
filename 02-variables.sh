@@ -1,4 +1,4 @@
-#!bin/bash
+#!/bin/bash
 
 echo "Ramesh:: Hello Suresh, How are you?"
 echo "Suresh:: Hello Ramesh, I am fine. How are you?"
