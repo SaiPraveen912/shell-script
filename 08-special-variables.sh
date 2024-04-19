@@ -11,3 +11,6 @@ echo "Scrpt name: $0"
 
 # to know the present working dierectory -> $PWD
 echo "Current working dierectory: $PWD"
+
+# to get the home dierectory of a user to know who is running the script -> $HOME
+echo "Home dierectory of current user: $HOME"
