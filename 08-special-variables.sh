@@ -24,3 +24,5 @@ echo "Hostname: $HOSTNAME"
 # to know the process ID of current shell script -> $$
 echo "Process ID of the current shell script: $$"
 
+sleep 60
+
