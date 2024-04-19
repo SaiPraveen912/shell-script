@@ -7,4 +7,6 @@ MOVIES=("RRR" "DjTillu" "Devara") # list of values
 # size of above array 3
 # indexes are 0,1,2 index = size-1
 
-echo "First Movie is :"
+echo "First Movie is :${MOVIES[0]}"
+echo "Second Movie is :${MOVIES[1]}"
+echo "Third Movie is :${MOVIES[2]}"
