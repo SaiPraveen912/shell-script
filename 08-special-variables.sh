@@ -24,5 +24,8 @@ echo "Hostname: $HOSTNAME"
 # to know the process ID of current shell script -> $$
 echo "Process ID of the current shell script: $$"
 
-sleep 60
+sleep 60 &
+
+# to know the process id of last background command -> $!
+echo "Process ID of last background command: $!"
 
