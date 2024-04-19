@@ -7,7 +7,7 @@ echo "All variables: $@"
 echo "No of variables passed: $#"
 
 # to know the script name -> $0
-echo "Scrpt name: $0"
+echo "Script name: $0"
 
 # to know the present working dierectory -> $PWD
 echo "Current working dierectory: $PWD"
@@ -24,7 +24,7 @@ echo "Hostname: $HOSTNAME"
 # to know the process ID of current shell script -> $$
 echo "Process ID of the current shell script: $$"
 
-sleep 60 &
+sleep 60 & # & is used to run in background
 
 # to know the process id of last background command -> $!
 echo "Process ID of last background command: $!"
