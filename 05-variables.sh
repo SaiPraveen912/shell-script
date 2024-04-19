@@ -2,10 +2,12 @@
 
 echo "Please enter username::"
 
-read USERNAME #here USERNAME is variable
+# -s is used to hide what we enter
+read -s USERNAME #here USERNAME is variable
 
 echo "Please enter password::"
 
-read PASSWORD
+# -s is used to hide what we enter
+read -s PASSWORD #here PASSWORD is variable
 
 echo "Username is: $USERNAME, Password is : $PASSWORD"
