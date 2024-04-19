@@ -21,3 +21,6 @@ echo "Which user is running this script: $USER"
 # to know the host name -> $HOSTNAME
 echo "Hostname: $HOSTNAME"
 
+# to know the process ID of current shell script -> $$
+echo "Process ID of the current shell script: $$"
+
