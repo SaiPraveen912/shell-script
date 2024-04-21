@@ -54,7 +54,8 @@ do
     then
         echo -e "$i already installed...$Y SKIPPING $N"
     else
-        echo "$i not installed...Need to install"
+        dnf install $i -y &>>$LOGFILE # if $i packages not installed it gets installed here and redierects info to LOGFILE in /tmp/
+        VALIDATE $? "Installation of $i" # $1 -> $?(exit status), $2 -> "Installation of $i" -> $i -> package to install 
     fi
 done
  
