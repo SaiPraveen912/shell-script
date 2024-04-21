@@ -2,10 +2,20 @@
 
 USERID=$(id -u)
 
+# VALIDATE(){
+#     # $? -> $1 and "Installing MySQL" -> $2
+#     echo "Exit Status: $1"
+#     echo "What are you doing: $2"
+# }
+
 VALIDATE(){
-    # $? -> $1 and "Installing MySQL" -> $2
-    echo "Exit Status: $1"
-    echo "What are you doing: $2"
+    if [ $1 -ne 0 ] # $1 have exit status of cmd : dnf install mysql -y
+    then
+        echo "$2...FAILURE"
+        exit 1 # if FAILURE then only exit ortherwise no need to exit
+    else
+        echo "$2...SUCCESS"
+    fi    
 }
 
 if [ $USERID -ne 0 ]
