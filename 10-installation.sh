@@ -33,6 +33,14 @@
 # echo "is script proceeding?"
 
 
+USERID=$(id -u)
+
+if [ $USERID -ne 0 ] # If 0 then super/root user otherwise normal user
+then    
+    echo "Please run this script with root access."
+else
+    echo "You are super user."
+fi    
 
 dnf install mysql -y
 
