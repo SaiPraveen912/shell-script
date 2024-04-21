@@ -48,7 +48,7 @@ dnf install mysql -y
 if [ $? -ne 0 ] # $?-> is the exit status of this command dnf install mysql -y
 then
     echo "Installation of MySQL...FAILURE"
-    exit 1
+    exit 1 # manually exit if error comes.
 else
     echo "Installation of MySQL...SUCCESS"
 fi
@@ -58,7 +58,7 @@ dnf install git -y
 if [ $? -ne 0 ]
 then
     echo "Installation of Git...FAILURE"
-    exit 1
+    exit 1 # manually exit if error comes.
 else
     echo "Installation of Git...SUCCESS"
 fi
