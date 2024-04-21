@@ -51,5 +51,12 @@ then
     exit 1
 fi
 
+dnf install git -y
+if [ $? -ne 0 ]
+then
+    echo "Installation of Git...FAILURE"
+    exit 1
+fi
+
 echo "is script proceeding?"
 
