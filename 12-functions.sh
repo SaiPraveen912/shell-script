@@ -2,7 +2,7 @@
 
 USERID=$(id -u)
 TIMESTAMP=$(date +%F-%H-%M-%S) # 2024-04-21-07-00-14 -> Which time this is getting executed
-SCRIPT_NAME=$(echo $0 | cut -d "." -f1 ) # $0 -> to get the script name
+SCRIPT_NAME=$(echo $0 | cut -d "." -f1) # $0 -> to get the script name
 LOGFILE=/tmp/$SCRIPT_NAME-$TIMESTAMP.log
 
 # VALIDATE(){
