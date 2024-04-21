@@ -17,7 +17,7 @@ SCRIPT_NAME=$(echo $0 | cut -d "." -f1) # $0 -> to get the script name
 LOGFILE=/tmp/$SCRIPT_NAME-$TIMESTAMP.log
 R="\e[31m" # red color symbol
 G="\e[32m" # green color symbol
-N="\e[om"  # normal color symbol
+N="\e[0m"  # normal color symbol
 
 echo "Script started executing at: $TIMESTAMP"
 
