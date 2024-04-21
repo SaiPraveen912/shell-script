@@ -1,6 +1,9 @@
 #!/bin/bash
 
 USERID=$(id -u)
+TIMESTAMP=$(date +%F-%H-%M-%S) # 2024-04-21-07-00-14 -> Which time this is getting executed
+SCRIPT_NAME=$(echo $0 | cut -d "." -f1 ) # $0 -> to get the script name
+LOGFILE=/tmp/$SCRIPT_NAME-$TIMESTAMP.log
 
 # VALIDATE(){
 #     # $? -> $1 and "Installing MySQL" -> $2
@@ -28,13 +31,13 @@ fi
 
 
 
-dnf install mysql -y
+dnf install mysql -y &>>$LOGFILE  # redierection to LOGFILE & is for both success and error messages >> is to append all errors
 # $? -> $1 and "Installing MySQL" -> $2
 VALIDATE $? "Installing MySQL" # Passing 2 argument to function
  
 
 
-dnf install git -y
+dnf install git -y &>>$LOGFILE
 # $? -> $1 and "Installing MySQL" -> $2
 VALIDATE $? "Installing Git" # Passing 2 argument to function
 
