@@ -43,7 +43,13 @@ else
     echo "You are super user."
 fi    
 
-dnf install mysql -y
+dnf install mysqll -y
+
+if [ $? -ne 0 ] # $?-> is the exit status of this command dnf install mysql -y
+then
+    echo "Installation of MySQL...FAILURE"
+    exit 1
+fi
 
 echo "is script proceeding?"
 
