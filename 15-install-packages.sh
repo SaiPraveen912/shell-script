@@ -25,5 +25,10 @@ fi
 # sudo sh install-packages mysql gcc docker
 # special variable to get all params --> $@
 
-echo "All packages: $@"
+# echo "All packages: $@" # ->> All packages: mysql git gcc fail2ban
+for i in $@
+do 
+    echo "package to install: $i"
+done
+ 
 
