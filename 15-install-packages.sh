@@ -16,6 +16,10 @@ USERID=$(id -u)
 TIMESTAMP=$(date +%F-%H-%M-%S) # 2024-04-21-07-00-14 -> Which time this is getting executed
 SCRIPT_NAME=$(echo $0 | cut -d "." -f1) # $0 -> to get the script name
 LOGFILE=/tmp/$SCRIPT_NAME-$TIMESTAMP.log
+R="\e[31m" # red color symbol
+G="\e[32m" # green color symbol
+Y="\e[33m"
+N="\e[0m"  # normal color symbol
 
 
 VALIDATE(){
@@ -48,7 +52,7 @@ do
     dnf list installed $i &>>$LOGFILE # checks if these are installed : mysql git gcc fail2ban and redierects to $LOGFILE
     if [ $? -eq 0 ] # if exit status is 0 if installed
     then
-        echo "$i already installed...SKIPPING"
+        echo -e "$i already installed...$Y SKIPPING $N"
     else
         echo "$i not installed...Need to install"
     fi
