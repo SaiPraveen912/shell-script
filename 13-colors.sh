@@ -56,3 +56,9 @@ VALIDATE $? "Installing MySQL" # Passing 2 argument to function
 dnf install git -y &>>$LOGFILE
 # $? -> $1 and "Installing MySQL" -> $2
 VALIDATE $? "Installing Git" # Passing 2 argument to function
+
+
+dnf install dockerr - &>>$LOGFILE
+VALIDATE $? "Installing Docker"
+
+
