@@ -1,6 +1,6 @@
 #!/bin/bash
 
-USERID=$(id -u)
+USERID=$(id -u) # Check if user is root user or not
 
 VALIDATE(){ # VALIDATE is name of the function
     echo "Exit status: $1"
@@ -9,10 +9,10 @@ VALIDATE(){ # VALIDATE is name of the function
 
 if [ $USERID -ne 0 ]
 then
-    echo "Please run with root user"
+    echo "Please run with root user" # if not root user exit
     exit 1
 else
-    echo "Running with root user"
+    echo "Running with root user" # if root user run
 fi
 
 
