@@ -1,6 +1,6 @@
 #!/bin/bash
 
-SOURCE_DIERECTORY=/tmp/apppp-logs
+SOURCE_DIERECTORY=/tmp/app-logs
 
 R="\e[31m" # red color symbol
 G="\e[32m" # green color symbol
@@ -14,3 +14,7 @@ else
     echo -e "$R Please make sure $SOURCE_DIERECTORY exists $N"
     exit 1
 fi
+
+FILES=$(find $SOURCE_DIERECTORY -name "*.log" -mtime +14)
+
+echo "Files to delete: $FILES"
