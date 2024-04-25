@@ -2,6 +2,12 @@
 
 set -e
 
+failure(){
+    echo "Failed at $1 : $2"
+}
+
+trap 'failure ${LINENO} "$BASH_COMMAND"' ERR
+
 USERID=$(id -u)
 
 if [ $USERID -ne 0 ] # If 0 then super/root user otherwise normal user
