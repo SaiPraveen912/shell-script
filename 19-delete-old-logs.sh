@@ -1,6 +1,6 @@
 #!/bin/bash
 
-SOURCE_DIERECTORY=/tmp/app-logs
+SOURCE_DIERECTORY=/tmp/apppp-logs
 
 R="\e[31m" # red color symbol
 G="\e[32m" # green color symbol
