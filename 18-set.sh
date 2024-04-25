@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -e
+
 USERID=$(id -u)
 
 if [ $USERID -ne 0 ] # If 0 then super/root user otherwise normal user
